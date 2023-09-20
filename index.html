@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 1</title>
+  </head>
+  <body>
+    <script>
+      do {
+        if (!confirm("Ввести дані?")) {
+          console.log("Робота програми завершена!");
+          break;
+        } else {
+          let x = Number(prompt("Введіть перше число X"));
+          let y;
+          let result;
+          do {
+            y = Number(prompt("Введіть друге число y від 0 до 4"));
+          } while (y < 0 || y > 4);
+
+          switch (y) {
+            case 0:
+              result = Math.pow(x, 0);
+              console.log(`${x} в ступіні 0 = ${result}`);
+              break;
+            case 1:
+              result = Math.pow(x, 1);
+              console.log(`${x} в ступіні 1 = ${result}`);
+              break;
+            case 2:
+              result = Math.pow(x, 2);
+              console.log(`${x} в ступіні 2 = ${result}`);
+              break;
+            case 3:
+              result = Math.pow(x, 3);
+              console.log(`${x} в ступіні 3 = ${result}`);
+              break;
+            case 4:
+              result = Math.pow(x, 4);
+              console.log(`${x} в ступіні 4 = ${result}`);
+              break;
+          }
+        }
+      } while (confirm("Ввести дані?"));
+    </script>
+  </body>
+</html>
