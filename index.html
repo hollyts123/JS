@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 2</title>
+  </head>
+  <body>
+    <script>
+      function raiseToPower(a, b) {
+        let result = Math.pow(a, b);
+        console.log(`${a} в ступіні ${b} = ${result}`);
+      }
+
+      do {
+        if (!confirm("Ввести дані?")) {
+          console.log("Робота програми завершена!");
+          break;
+        } else {
+          let x = Number(prompt("Введіть перше число X"));
+          let y;
+          do {
+            y = Number(prompt("Введіть друге число y від 0 до 4"));
+          } while (y < 0 || y > 4);
+          raiseToPower(x, y);
+        }
+      } while (confirm("Ввести дані?"));
+    </script>
+  </body>
+</html>
